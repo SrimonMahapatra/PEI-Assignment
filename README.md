@@ -330,9 +330,13 @@ This table will consist of the following -
 ### **Introduction of payments table**
 
 The monetary value associated with an order and the actual payment received from a customer represent two different business concepts.
+
 In the current model we are tracking the product amount that is shipped to the customer 
+
 but there is no tracking of the payment details from the customer such as payment amount, payment method, instalments, date of payment received.
+
 To accurately track all the financial transactions and to distinguish between the value of goods that has been shipped vs the amount paid by the customer, 
+
 a separate payment table is need to be introduced.
 
 | Column | Data Type | Description |
@@ -348,8 +352,11 @@ a separate payment table is need to be introduced.
 ### **Introduction of timestamps in orders table**
 
 It has been observed, that the **orders** table doesn’t have any timestamps columns, 
+
 this limits the analysis for time based performance and delay analysis for the orders, 
+
 which is crucial to understand the any bottleneck in the orders from shipping to delivery.
+
 without timestamps, it is not possible to analyze order trends over time or measure delays between key stages of the order process.
 
 **Below is the updated orders table :** 
