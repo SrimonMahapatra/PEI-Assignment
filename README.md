@@ -287,7 +287,7 @@ To avoid such scenarios I propose an order items table which will contain the fo
 | --- | --- | --- |
 | item_id, order_id |  | Composite Primary key; unique  identifier |
 | item_id | INT | Foreign Key `items.item_id` |
-| order_id | VARCHAR(50) | Foreign key to `orders.order_id` |
+| order_id | INT | Foreign key to `orders.order_id` |
 | item | VARCHAR(50) | Name of the products |
 | item_qty | INT | Quantity of items ordered |
 | item_unit_price | FLOAT | unit price of items  |
