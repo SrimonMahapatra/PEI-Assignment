@@ -199,7 +199,7 @@ WHERE o.customer_id IS NULL
 
 ```
 
-[data-1768748629288.csv](data-1768748629288.csv)
+[data-1768748629288.csv]([data-1768748629288.csv](https://github.com/SrimonMahapatra/PEI-Assignment/blob/6a60920818cdc2de420b9b74716f750fb7fbbfca/data-1768754688974.csv))
 
 ```sql
 SELECT COUNT(DISTINCT s.customer_id) as shipping_customer_count, 
