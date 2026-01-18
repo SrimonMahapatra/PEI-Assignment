@@ -199,7 +199,7 @@ WHERE o.customer_id IS NULL
 
 ```
 
-[data-1768748629288.csv](data-1768748629288.csv)
+[refrential integrity check for customers present in shipping table but not in orders table]([data-1768748629288.csv](https://github.com/SrimonMahapatra/PEI-Assignment/blob/f0e1f9d28898af7195423f989d3fb2702f34d79a/refrential%20integrity%20check%20for%20customers%20present%20in%20shipping%20table%20but%20not%20in%20orders%20tablecsv))
 
 ```sql
 SELECT COUNT(DISTINCT s.customer_id) as shipping_customer_count, 
