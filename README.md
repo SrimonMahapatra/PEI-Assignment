@@ -199,7 +199,7 @@ WHERE o.customer_id IS NULL
 
 ```
 
-[refrential integrity check for customers present in shipping table but not in orders table](https://github.com/SrimonMahapatra/PEI-Assignment/blob/6a60920818cdc2de420b9b74716f750fb7fbbfca/data-1768754688974.csv)
+[data-1768748629288.csv](data-1768748629288.csv)
 
 ```sql
 SELECT COUNT(DISTINCT s.customer_id) as shipping_customer_count, 
@@ -285,10 +285,9 @@ To avoid such scenarios I propose an order items table which will contain the fo
 
 | Column | Data Type | Description |
 | --- | --- | --- |
-| item_id, order_id |  | Composite Primary key; unique  identifier |
+| order_item_id | INT | Primary key |
 | item_id | INT | Foreign Key `items.item_id` |
 | order_id | INT | Foreign key to `orders.order_id` |
-| item | VARCHAR(50) | Name of the products |
 | item_qty | INT | Quantity of items ordered |
 | item_unit_price | FLOAT | unit price of items  |
 | items_total_amount | FLOAT | item_qty * item_unit_price |
@@ -325,8 +324,8 @@ This table will consist of the following -
 
 | Column | Data Type | Description |
 | --- | --- | --- |
-| item_id | INT | Composite Primary key; unique  identifier |
-| item_name | VARCHAR(30) | Foreign Key `items.item_id` |
+| item_id | INT | Primary key |
+| item_name | VARCHAR(30) |  |
 
 ### **Introduction of payments table**
 
@@ -337,7 +336,7 @@ To accurately track all the financial transactions and to distinguish between th
 
 | Column | Data Type | Description |
 | --- | --- | --- |
-| payment_id | INT | Primary key; unique payment identifier |
+| payment_id | INT | Primary key |
 | order_id | INT | Foreign key to `orders.order_id` |
 | payment_installment | INT | Instalments number for the payment |
 | payment_type | VARCHAR(30) | Mode of payment |
@@ -357,8 +356,8 @@ orders, which is crucial to understand the any bottleneck in the orders shipping
 
 | Column | Data Type | Description |
 | --- | --- | --- |
-| order_id | INT | Primary key; unique order identifier |
-| customer-id | INT | Foreign key to `customer.customer_id` |
+| order_id | INT | Primary key |
+| customer_id | INT | Foreign key to `customer.customer_id` |
 | amount | INT | Total amount of orders |
 | order_approved_date | TIMESTAMP | Approval date of order |
 | order_shipping_date | TIMESTAMP | Shipping date of order |
@@ -373,13 +372,13 @@ Prepare a story with technical specifications for one part of the data model f
 
  
 
-![Blank board.png](https://github.com/SrimonMahapatra/PEI-Assignment/blob/d99bee056829bc6806bb9d7b4c83e735ea4a7568/Blank%20board.png)
+![Blank board.png](Blank_board.png)
 
 ## customers
 
 | Column | Data Type | Description |
 | --- | --- | --- |
-| customer_id | INT | Primary key; unique customer identifier |
+| customer_id | INT | Primary key |
 | first | VARCHAR(100) | First name of the customer |
 | last | VARCHAR(100) | Last name of the customer |
 | age | INT | Age of the customer |
@@ -389,8 +388,8 @@ Prepare a story with technical specifications for one part of the data model f
 
 | Column | Data Type | Description |
 | --- | --- | --- |
-| order_id | INT | Primary key; unique order identifier |
-| customer-id | INT | Foreign key to `customer.customer_id` |
+| order_id | INT | Primary key |
+| customer_id | INT | Foreign key to `customer.customer_id` |
 | amount | INT | Total amount of orders |
 | order_approved_date | TIMESTAMP | Approval date of order |
 | order_shipping_date | TIMESTAMP | Shipping date of order |
@@ -401,7 +400,7 @@ Prepare a story with technical specifications for one part of the data model f
 
 | Column | Data Type | Description |
 | --- | --- | --- |
-| shipping_id | INT | Primary key; unique shipping identifier |
+| shipping_id | INT | Primary key |
 | order_id | INT | Foreign key to `orders.order_id` |
 | status | VARCHAR(30) |  |
 
@@ -409,10 +408,9 @@ Prepare a story with technical specifications for one part of the data model f
 
 | Column | Data Type | Description |
 | --- | --- | --- |
-| item_id, order_id |  | Composite Primary key; unique  identifier |
+| order_item_id | INT | Primary key |
 | item_id | INT | Foreign Key `items.item_id` |
 | order_id | INT | Foreign key to `orders.order_id` |
-| item | VARCHAR(50) | Name of the products |
 | item_qty | INT | Quantity of items ordered |
 | item_unit_price | FLOAT | unit price of items |
 | items_total_amount | FLOAT | item_qty * item_unit_price |
@@ -421,14 +419,14 @@ Prepare a story with technical specifications for one part of the data model f
 
 | Column | Data Type | Description |
 | --- | --- | --- |
-| item_id | INT | Composite Primary key; unique  identifier |
-| item_name | VARCHAR(30) | Foreign Key `items.item_id` |
+| item_id | INT | Primary key |
+| item_name | VARCHAR(30) |  |
 
 ## payments
 
 | Column | Data Type | Description |
 | --- | --- | --- |
-| payment_id | INT | Primary key; unique payment identifier |
+| payment_id | INT | Primary key |
 | order_id | INT | Foreign key to `orders.order_id` |
 | payment_installment | INT | Instalments number for the payment |
 | payment_type | VARCHAR(30) | Mode of payment |
