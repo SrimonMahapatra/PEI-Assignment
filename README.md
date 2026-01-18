@@ -372,7 +372,7 @@ Prepare a story with technical specifications for one part of the data model f
 
  
 
-![Blank board.png](Blank_board.png)
+![Blank board.png](https://github.com/SrimonMahapatra/PEI-Assignment/blob/592579d9ae2c0301d776e27418e9eef3d94401af/Blank%20board.png)
 
 ## customers
 
