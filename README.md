@@ -547,7 +547,7 @@ FROM T2
 WHERE RANK = 1
 ```
 
-[data-1768748531152.csv](data-1768748531152.csv)
+[most product purchased bay age category](https://github.com/SrimonMahapatra/PEI-Assignment/blob/9f69fadbaeaff87d7eea6cd08c44e69850cd2e89/most%20product%20purchased%20bay%20age%20category.csv)
 
 ### Task-5 :
 
