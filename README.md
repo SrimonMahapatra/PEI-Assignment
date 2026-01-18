@@ -486,7 +486,7 @@ ORDER BY
 o.customer_id
 ```
 
-[data-1768748172695.csv](data-1768748172695.csv)
+[Total number of transactions qty sold and amount](https://github.com/SrimonMahapatra/PEI-Assignment/blob/5456c9cc41de393adb99e5f4c90a0ccc557389fe/Total%20number%20of%20transactions%20qty%20sold%20and%20amount.csv)
 
 ### Task-3 :
 
