@@ -574,3 +574,5 @@ FROM t1)
 SELECT * FROM t2
 WHERE rnk = 1
 ```
+
+[country with minimum transactions](https://github.com/SrimonMahapatra/PEI-Assignment/blob/e837993ddada431bda1a63b3bd2288d21ad4320c/country%20with%20minimum%20transactions.csv)
