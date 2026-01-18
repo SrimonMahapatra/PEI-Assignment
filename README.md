@@ -456,7 +456,7 @@ GROUP BY
 c.country, s.status
 ```
 
-[data-1768747904639.csv](data-1768747904639.csv)
+[country with pending delivery status and amount spent](https://github.com/SrimonMahapatra/PEI-Assignment/blob/618af582349f65d51c26dfa00c86742aaa677b28/country%20with%20pending%20delivery%20status%20and%20amount%20spent.csv)
 
 ### Task-2 :
 
