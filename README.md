@@ -373,19 +373,17 @@ Prepare a story with technical specifications for one part of the data model f
 
  
 
-![Blank board.png](Blank_board.png)
+![Blank board.png](https://github.com/SrimonMahapatra/PEI-Assignment/blob/77b211245e5de82e18dd846a7e1eea52f099abab/Blank%20board%20test.png)
 
 ## customers
 
 | Column | Data Type | Description |
 | --- | --- | --- |
-| customer_id | VARCHAR(50) | Foreign key to `olist_orders.order_id` |
-| order_item_id | INT | Line item number within an order (composite primary key with order_id) |
-| product_id | VARCHAR(50) | Foreign key to `olist_products.product_id` |
-| seller_id | VARCHAR(50) | Foreign key to `olist_sellers.seller_id` |
-| shipping_limit_date | TIMESTAMP | Last allowed date seller must ship item |
-| price | FLOAT | Item price |
-| freight_value | FLOAT | Shipping cost charged |
+| customer_id | INT | Foreign key to `olist_orders.order_id` |
+| first | VARCHAR(100) | Line item number within an order (composite primary key with order_id) |
+| last | VARCHAR(100) | Foreign key to `olist_products.product_id` |
+| age | INT | Foreign key to `olist_sellers.seller_id` |
+| country | VARCHAR(30) | Last allowed date seller must ship item |
 
 ## orders
 
