@@ -379,11 +379,11 @@ Prepare a story with technical specifications for one part of the data model f
 
 | Column | Data Type | Description |
 | --- | --- | --- |
-| customer_id | INT | Foreign key to `olist_orders.order_id` |
-| first | VARCHAR(100) | Line item number within an order (composite primary key with order_id) |
-| last | VARCHAR(100) | Foreign key to `olist_products.product_id` |
-| age | INT | Foreign key to `olist_sellers.seller_id` |
-| country | VARCHAR(30) | Last allowed date seller must ship item |
+| customer_id | INT | Primary key; unique customer identifier |
+| first | VARCHAR(100) | First name of the customer |
+| last | VARCHAR(100) | Last name of the customer |
+| age | INT | Age of the customer |
+| country | VARCHAR(30) | Country of the customer |
 
 ## orders
 
