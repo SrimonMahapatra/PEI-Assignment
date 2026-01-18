@@ -520,7 +520,7 @@ WHERE RANK = 1
 
 ### Task-4 :
 
-*The country that had the minimum transactions and sales amount.*
+*The most purchased product based on the age category, less than 30 and above 30.*
 
 ```sql
 WITH t1 as
@@ -548,3 +548,29 @@ WHERE RANK = 1
 ```
 
 [data-1768748531152.csv](data-1768748531152.csv)
+
+### Task-5 :
+
+*The country that had the minimum transactions and sales amount.*
+
+```sql
+WITH t1 as
+(
+SELECT
+c.country,
+count(o.order_id) as transactions_count,
+sum(o.amount) as total_amount
+FROM bronze.customers c
+JOIN bronze.orders o
+ON c.customer_id = o.customer_id
+GROUP BY
+c.country
+),
+
+t2 as
+(SELECT country, transactions_count, total_amount, dense_rank() OVER ( order by transactions_count, total_amount) as rnk
+FROM t1)
+
+SELECT * FROM t2
+WHERE rnk = 1
+```
